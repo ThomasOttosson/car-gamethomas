@@ -1,9 +1,22 @@
 def get_shot():
 
-    shot = input("please enter your guess")
+    ok = "n"
+    while ok == "n":
+        try:
+            shot = input("please enter your guess")
+            shot = int(shot)
+            if shot < 0 or shot > 99:
+                print("incorrect number, please try again")
+            else:
+                ok = "y"
+                break
+        except:
+            print("incorrect entry, please enter again")
+    return shot
 
 def show_board(hit,miss,comp):
-
+    print("            battleships    ")
+    print("     0  1  2  3  4  5  6  7  8  9")
 
     place = 0
     for x in range(10):
@@ -19,10 +32,11 @@ def show_board(hit,miss,comp):
 
             row = row + ch
             place = place + 1
+            print(x," ",row)
 
 hit = [21,22]
 miss = [20,24,12,13]
 comp = [23]
 
-get_shot()
+shot = get_shot()
 show_board(hit,miss,comp)
