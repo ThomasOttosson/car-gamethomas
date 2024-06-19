@@ -1,5 +1,5 @@
-from random import randrange
-import random
+#from random import randrange
+import random 
 
 def check_ok(boat,taken):
     
@@ -47,8 +47,8 @@ def create_boats():
     for b in boats:
         boat = [-1]
         while boat[0] == -1:
-            boat_start = randrange(99)
-            boat_direction = randrange(1,4)
+            boat_start = random.randrange(99)
+            boat_direction = random.randrange(1,4)
             print(b,boat_start,boat_direction)
             boat = check_boat(b,boat_start,boat_direction,taken)
         ships.append(boat)
@@ -81,7 +81,7 @@ def get_shot_comp(guesses,tactics):
             if len(tactics) > 0:
                 shot = tactics[0]
             else:
-                shot = randrange(99)
+                shot = random.randrange(99)
             
             if shot not in guesses:
                 ok = "y"
@@ -161,9 +161,9 @@ def calc_tactics(shot,tactics,guesses,hit):
     for i in range (len(temp)):
         if temp[i] not in guesses and temp[i] < 100 and temp[i] > -1:
             cand.append(temp[i])
-random.shuffle(cand)
+    random.shuffle(cand)
 
-return cand
+    return cand
 
 def check_if_empty(list_of_lists):
     return all([not elem for elem in list_of_lists ])
