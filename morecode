@@ -135,13 +135,26 @@ def calc_tactics(shot,tactics,guesses,hit):
         temp = [shot-1,shot+1,shot-10,shot+10]
     else:
         if shot-1 in hit:
-            temp = [shot-2,shot+1]
+            if shot-2 in hit:
+                temp = [shot-3,shot+1]
+            else:
+                temp = [shot-2,shot+1]
         elif shot+1 in hit:
-            temp = [shot+2,shot-1]
+            if shot-2 in hit:
+                temp = [shot+3,shot-1]
+            else:
+                temp = [shot+2,shot-1]
         elif shot-10 in hit:
-            temp = [shot-20,shot+10]
+            if shot-2 in hit:
+                temp = [shot-30,shot+10]
+            else:
+                temp = [shot-20,shot+10]
         elif shot+10 in hit:
-            temp = [shot+20,shot-10]
+            if shot-2 in hit:
+                temp = [shot+30,shot-10]
+            else:
+                temp = [shot+20,shot-10]
+        
         
         
     cand = []
@@ -152,6 +165,9 @@ random.shuffle(cand)
 
 return cand
 
+def check_if_empty(list_of_lists):
+    return all([not elem for elem in list_of_lists ])
+
 hit = []
 miss = []
 comp = []
@@ -160,7 +176,7 @@ ships,taken = create_boats()
 
 tactics = []
 
-for i in range(2):
+for i in range(80):
     shot,guesses = get_shot_comp(guesses,tactics)
     ships,hit,miss,comp,missed = check_shot(shot,ships,hit,miss,comp)
     
@@ -171,6 +187,10 @@ for i in range(2):
         tactics = []
     elif len(tactics) > 0:
         tactics.pop(0)
+
+    if check_if_empty(ships):
+        print("end of game",i)
+        break
 
 show_board_c(taken)
 show_board(hit,miss,comp)
