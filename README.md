@@ -1,32 +1,20 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships game
 
-Welcome,
+![battleship](./assets/images/battleships.png)
+## How to play
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+* The purpose of the game is to discover all the "o" marked numbers in the board and sink the other opponents ships which is the computer in this game.
 
-## Reminders
+* First steps in the game is to enter your ships length where you choose 6 different ships.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+* The board has number 0-99 where you can place out the ships and th sizes of the ships are: 5,4,3,3,2,2 in terms of length of the board.
 
-## Creating the Heroku app
+* The user guesses where the computer opponent has placed their ships by entering a number between 0-99.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+* The user cant guess the same number twice and everytime the user has guessed a number he or she will see that number on the board marked with an "x". If the user guessed the right number they will see the board marked with an "o".
 
-1. `heroku/python`
-2. `heroku/nodejs`
+* The game informs the user if the user won or the computer and it will also tell them how attempts  it took them.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
