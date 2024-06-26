@@ -1,8 +1,13 @@
 from random import randrange
 import random
- 
+
 def check_ok(boat,taken):
-     
+    """  
+    comment
+    """
+
+    #comment
+    
     boat.sort()
     for i in range(len(boat)):
         num = boat[i]
