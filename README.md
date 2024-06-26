@@ -33,6 +33,8 @@
 
 ## Credits
 
+* The majority of the code was taken or inspired directly or indirectly through https://drcodie.com/
+
 
 
 
