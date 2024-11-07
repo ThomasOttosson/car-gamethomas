@@ -34,7 +34,14 @@ def get_ship(long,taken):
     while ok:      
         ship = []
         #ask the user to enter numbers
-        print("enter your ship of length ",long)
+        print("Welcome to Battleships Game")
+        print(" ")
+        print("GUIDELINES AND RULES:")
+        print("The board's consists of the numbers 0-99 ")
+        print("You can place your ships as a row(for example 1,2,3,4,5)")
+        print("Or you can place the ships vertical(for example 10,20,30,40,50)")
+        print(" ")
+        print("Enter your ship of length ",long)
         for i in range(long):
             boat_num = input("please enter a number")
             ship.append(int(boat_num))       
@@ -94,8 +101,11 @@ def create_boats(taken,boats):
      
     return ships,taken
  
+
+""" This function prints the outlook of the board """
 def show_board_c(taken):
-    print("            battleships    ")
+    print("     Battleships(Your ships on the board)    ")
+    print(" Your board will be placed at the bottom once you enter the first shot ")
     print("     0  1  2  3  4  5  6  7  8  9")
  
     place = 0
@@ -109,7 +119,10 @@ def show_board_c(taken):
             place = place + 1
              
         print(x," ",row)
+""" The code above is the end of the code that creates the board """
  
+
+""" This code under creates the shot """
 def get_shot_comp(guesses,tactics):
      
     ok = "n"
@@ -129,7 +142,7 @@ def get_shot_comp(guesses,tactics):
     return shot,guesses
  
 def show_board(hit,miss,comp):
-    print("            battleships    ")
+    print("            Battleships    ")
     print("     0  1  2  3  4  5  6  7  8  9")
  
     place = 0
