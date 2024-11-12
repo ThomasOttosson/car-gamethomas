@@ -5,42 +5,35 @@ from colorama import Fore, Back, Style
 colorama.init()
 
 def check_ok(boat,taken):
-    """  
-    comment
-    """
-
-    #comment
+    """Check if a boat's positions are valid and do not overlap with existing taken positions."""
     
-    boat.sort()
+    boat.sort() # Ensure positions are in ascending order for validation
     for i in range(len(boat)):
         num = boat[i]
-        if num in taken:
+        if num in taken: # If any position is already taken, set boat to invalid
             boat = [-1]
             break           
-        elif num < 0 or num > 99:
+        elif num < 0 or num > 99: # Check if position is out of board range
             boat = [-1]
             break
-        elif num % 10 == 9 and i < len(boat)-1:
+        elif num % 10 == 9 and i < len(boat)-1: # Prevent boats from wrapping to the next row
             if boat[i+1] % 10 == 0:
                 boat = [-1]
                 break
         if i != 0:
-            if boat[i] != boat[i-1]+1 and boat[i] != boat[i-1]+10:
+            if boat[i] != boat[i-1]+1 and boat[i] != boat[i-1]+10: # Validate continuity of boat
                 boat = [-1]
                 break
  
     return boat
 
 
-""" This code informs the user about the game and rules. It also makes the user create the 
-necesserary number of ships in order to play the game. There are 6 total where the user can place the
-ships as a row or in a vertical position"""
 def get_ship(long,taken):
- 
+    """Prompt the user to input a valid ship of the specified length and update the taken list."""
+
     ok = True
     while ok:      
         ship = []
-        #ask the user to enter numbers
         print(colorama.Fore.GREEN + Back.BLACK + "Welcome to Battleships Game")
         print(" ")
         print("GUIDELINES AND RULES:")
@@ -51,11 +44,10 @@ def get_ship(long,taken):
         print("Enter your ship of length ",long)
         for i in range(long):
             boat_num = input("please enter a number")
-            ship.append(int(boat_num))       
-        #check that ship
-        ship = check_ok(ship,taken)
+            ship.append(int(boat_num)) # Collect positions for the ship
+        ship = check_ok(ship,taken) # Validate the ship
         if ship[0] != -1:
-            taken = taken + ship
+            taken = taken + ship # Add valid ship positions to taken list
             break
         else:
            print("error - please try again") 
@@ -63,6 +55,7 @@ def get_ship(long,taken):
     return ship,taken
          
 def create_ships(taken,boats):
+    """Generate all ships for the player based on specified boat lengths, updating taken positions."""
  
     ships = []
     #boats = [5,4,3,3,2,2]
