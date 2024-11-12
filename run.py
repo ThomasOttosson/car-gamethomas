@@ -209,7 +209,7 @@ def calc_tactics(shot,tactics,guesses,hit):
                 if shot+num not in hit:
                     temp.append(shot+num) 
                     break
-    #tactics longer
+    
     cand =[]
     for i in range(len(temp)):
         if temp[i] not in guesses and temp[i] < 100 and temp[i] > -1:
@@ -219,6 +219,7 @@ def calc_tactics(shot,tactics,guesses,hit):
     return cand
  
 def get_shot(guesses):
+    """Prompt the player to enter a valid guess, ensuring it hasn’t been guessed before."""
      
     ok = "n"
     while ok == "n":
@@ -238,16 +239,19 @@ def get_shot(guesses):
     return shot
  
 def check_if_empty_2(list_of_lists):
+    """Check if all sublists in a list are empty, indicating no ships remain."""
     return all([not elem for elem in list_of_lists ])
  
  
-#before game
+# Initialize lists for tracking the hits, misses, and completed ships for player 1
 hit1 = []
 miss1 = []
 comp1 = []
 guesses1 = []  
 missed1 = 0
 tactics1 = []
+
+# Initialize lists for tracking the board setup and gameplay for player 2
 taken1 = []
 taken2 = []
 hit2 = []
@@ -257,15 +261,18 @@ guesses2 = []
 missed2 = 0
 tactics2 = []
  
-battleships = [5,4,3,3,2,2]
-# game amount of ships
-#computer creates a board for player 1
-ships1,taken1 = create_boats(taken1,battleships)
-#user creates the board for player 2 - show board
+# Define lengths of ships to be placed on the board
+battleships = [5,4,3,3,2,2] 
+
+# Generate player 1's board with ships placed and track the taken positions
+ships1,taken1 = create_boats(taken1,battleships) 
+# Prompt player 2 to set up their board by choosing ship placements
 ships2,taken2 = create_ships(taken2,battleships)
-show_board_c(taken2)
+
+# Display player 2's board with initial ship placements
+show_board_c(taken2) 
  
-#loop
+# Main game loop runs for a set number of turns or until a player wins
 for i in range(80):
  
 #player shoots
