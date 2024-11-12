@@ -61,51 +61,48 @@ def create_ships(taken,boats):
     #boats = [5,4,3,3,2,2]
      
     for boat in boats:
-        ship,taken = get_ship(boat,taken)
-        ships.append(ship)
+        ship,taken = get_ship(boat,taken) # Get each ship's positions
+        ships.append(ship) # Append each created ship
          
     return ships,taken
  
 def check_boat(b,start,dirn,taken):
-     
+    """Generate a boat's positions based on starting position and direction and validate them."""
+
     boat = []
-    if dirn == 1:
+    if dirn == 1: # Direction: Up
         for i in range(b):
             boat.append(start - i*10)
-    elif dirn == 2:
+    elif dirn == 2: # Direction: Right
         for i in range(b):
             boat.append(start + i)
-    elif dirn == 3:
+    elif dirn == 3: # Direction: Down
         for i in range(b):
             boat.append(start + i*10)
-    elif dirn == 4:
+    elif dirn == 4: # Direction: Left
         for i in range(b):
             boat.append(start - i)
-    boat = check_ok(boat,taken)           
+    boat = check_ok(boat,taken)  # Validate boat positions against taken list         
     return boat  
  
 def create_boats(taken,boats):
+    """Generate all computer ships by randomly selecting starting positions and directions."""
  
     ships = []
-    #boats = [5,4,3,3,2,2]
     for b in boats:
         boat = [-1]
-        while boat[0] == -1:
+        while boat[0] == -1: # Retry until a valid boat configuration is created
             boat_start = randrange(99)
             boat_direction = randrange(1,4)
-            #print(b,boat_start,boat_direction)
             boat = check_boat(b,boat_start,boat_direction,taken)
-        ships.append(boat)
-        taken = taken + boat
-        #print(ships)
+        ships.append(boat) # Append each valid boat to the ship list
+        taken = taken + boat # Update taken positions
      
     return ships,taken
  
 
-""" This function prints the outlook of the board. The Board consists of the numbers 0-99 with two
-different board where the users board is placed on the bottom and the computer's board is placed
-on the top"""
 def show_board_c(taken):
+    """Display the user's board layout, marking ships' positions on the grid."""
     print("     Battleships(Your ships on your board)    ")
     print(" Your board will be placed at the bottom once you enter the first shot ")
     print("     0  1  2  3  4  5  6  7  8  9")
@@ -115,29 +112,26 @@ def show_board_c(taken):
         row = ""
         for y in range(10):
             ch = " _ "
-            if place in taken:
+            if place in taken: # Mark positions with ships
                 ch = " o "  
             row = row + ch
             place = place + 1
              
         print(x," ",row)
-""" The code above is the end of the code that creates the board """
  
-
-""" This code under creates the shot from the user. If the user doesn't enter a number between 0-99
-the print message: incorrect entry - please enter again will pop up"""
 def get_shot_comp(guesses,tactics):
+    """Generate a computer shot based on remaining tactics or randomly if none left."""
      
     ok = "n"
     while ok == "n":
         try:
             if len(tactics) > 0:
-                shot = tactics[0]
+                shot = tactics[0] # Take next tactic shot if available
             else:
-                shot = randrange(99)
-            if shot not in guesses:
+                shot = randrange(99) # Generate random shot otherwise
+            if shot not in guesses: # Ensure shot hasn't been guessed already
                 ok = "y"
-                guesses.append(shot)
+                guesses.append(shot) # Add shot to guesses list
                 break
         except:
             print("incorrect entry - please enter again")
@@ -145,6 +139,7 @@ def get_shot_comp(guesses,tactics):
     return shot,guesses
 
 def show_board(hit,miss,comp):
+    """Display the current state of the board with hit, miss, and computer's completed ships."""
     print("            Battleships    ")
     print("     0  1  2  3  4  5  6  7  8  9")
  
@@ -154,41 +149,41 @@ def show_board(hit,miss,comp):
         for y in range(10):
             ch = " _ "
             if place in miss:
-                ch = " x "
+                ch = " x " # Mark missed shot
             elif place in hit:
-                ch = " o "
+                ch = " o " # Mark hit
             elif place in comp:
-                ch = " O "  
+                ch = " O " # Mark fully destroyed ship
             row = row + ch
             place = place + 1
              
         print(x," ",row)
  
 def check_shot(shot,ships,hit,miss,comp):
+    """Check if a shot hit or missed, update board accordingly, and remove positions from ships."""
      
     missed = 0
     for i in range(len(ships)):      
         if shot in ships[i]:
             ships[i].remove(shot)
             if len(ships[i]) > 0:
-                hit.append(shot)
+                hit.append(shot) # Add shot to hits if part of ship remains
                 missed = 1
             else:
-                comp.append(shot)
+                comp.append(shot) # Add shot to comp if entire ship is destroyed
                 missed = 2                             
     if missed == 0:
-        miss.append(shot)
+        miss.append(shot) # Add to misses if shot missed all ships
                  
     return ships,hit,miss,comp,missed
 
-""" This code under makes the computer smarter in the computer's tactics. Instead of the computer
-guessing a random number after the computer has hit parts of the ships, the computer will
-guess on the nearby numbers which gives the computer a higher chance to win """ 
+
 def calc_tactics(shot,tactics,guesses,hit):
+    """Calculate new tactics for computer's next shot based on previous successful hit locations."""
      
     temp = []
     if len(tactics) < 1:
-        temp = [shot-1,shot+1,shot-10,shot+10]
+        temp = [shot-1,shot+1,shot-10,shot+10] # Explore all adjacent cells if no tactics
     else:
         if shot-1 in hit:
             temp = [shot+1]
