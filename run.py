@@ -187,7 +187,10 @@ def check_shot(shot,ships,hit,miss,comp):
         miss.append(shot)
                  
     return ships,hit,miss,comp,missed
- 
+
+""" This code under makes the computer smarter in the computer's tactics. Instead of the computer
+guessing a random number after the computer has hit parts of the ships, the computer will
+guess on the nearby numbers which gives the computer a higher chance to win """ 
 def calc_tactics(shot,tactics,guesses,hit):
      
     temp = []
