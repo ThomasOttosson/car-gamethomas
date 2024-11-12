@@ -1,5 +1,8 @@
 from random import randrange
 import random
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 
 def check_ok(boat,taken):
     """  
@@ -34,7 +37,7 @@ def get_ship(long,taken):
     while ok:      
         ship = []
         #ask the user to enter numbers
-        print("Welcome to Battleships Game")
+        print(colorama.Fore.GREEN + Back.BLACK + "Welcome to Battleships Game")
         print(" ")
         print("GUIDELINES AND RULES:")
         print("The board's consists of the numbers 0-99 ")
@@ -104,7 +107,7 @@ def create_boats(taken,boats):
 
 """ This function prints the outlook of the board """
 def show_board_c(taken):
-    print("     Battleships(Your ships on the board)    ")
+    print("     Battleships(Your ships on your board)    ")
     print(" Your board will be placed at the bottom once you enter the first shot ")
     print("     0  1  2  3  4  5  6  7  8  9")
  
@@ -274,7 +277,7 @@ for i in range(80):
     show_board(hit1,miss1,comp1)
 #repeat until ships empty
     if check_if_empty_2(ships1):
-        print("end of game - winner in",i)
+        print("End of game - Congratulations, you won!",i)
         break   
 #computer shoots
    
