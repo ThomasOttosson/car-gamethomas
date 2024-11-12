@@ -30,7 +30,11 @@ def check_ok(boat,taken):
                 break
  
     return boat
- 
+
+
+""" This code informs the user about the game and rules. It also makes the user create the 
+necesserary number of ships in order to play the game. There are 6 total where the user can place the
+ships as a row or in a vertical position"""
 def get_ship(long,taken):
  
     ok = True
@@ -105,7 +109,9 @@ def create_boats(taken,boats):
     return ships,taken
  
 
-""" This function prints the outlook of the board """
+""" This function prints the outlook of the board. The Board consists of the numbers 0-99 with two
+different board where the users board is placed on the bottom and the computer's board is placed
+on the top"""
 def show_board_c(taken):
     print("     Battleships(Your ships on your board)    ")
     print(" Your board will be placed at the bottom once you enter the first shot ")
@@ -125,7 +131,8 @@ def show_board_c(taken):
 """ The code above is the end of the code that creates the board """
  
 
-""" This code under creates the shot """
+""" This code under creates the shot from the user. If the user doesn't enter a number between 0-99
+the print message: incorrect entry - please enter again will pop up"""
 def get_shot_comp(guesses,tactics):
      
     ok = "n"
@@ -143,7 +150,7 @@ def get_shot_comp(guesses,tactics):
             print("incorrect entry - please enter again")
              
     return shot,guesses
- 
+
 def show_board(hit,miss,comp):
     print("            Battleships    ")
     print("     0  1  2  3  4  5  6  7  8  9")
