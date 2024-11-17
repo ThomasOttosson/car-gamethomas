@@ -23,13 +23,19 @@
 
 * The board consists of the index numbers 0-99 which makes the board have a decent size and a well timed playing adventure.
 
-* The game has clear guidelines and rules which improves the understanding of the game.
+* The game has clear guidelines, rules and information which improves the understanding of the game.
+
+![battleship_guidelines](./assets/images/battleships_guideline_and_rules.png)
+
+![battleship_info](./assets/images/battleships_info.png)
 
 * The game has two boards which enables the user to see their own board and the enemy board at the same time.
 
 * The code has a function called "def calc_tactics" which makes the game more interactive for the user since the function hits the indexes nearby a hit segment of the ships.
 
 * Once the game is over the game explains who won which is either the user or the computer.
+
+![battleships_winner](./assets/images/battleships_winner.png)
 
 ## Overall features
 
