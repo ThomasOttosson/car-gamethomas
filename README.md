@@ -54,9 +54,23 @@
 
 ## Testing
 
-## Bugs
+* The testing of the game has been made through the deployed version in Heroku here: https://battleships-thomas-6fa1020603a4.herokuapp.com/
 
-## Validator testing
+* Some tests has also been made through the gitpod ide terminal. 
+
+* Some tests has been made through lighthouse in the google dev tools. See the results below.
+
+![battleships_lighthouse](./assets/images/lighthouse_heroku.png)
+
+* Some tests has been made through the website Amiresponsive: 
+
+https://ui.dev/amiresponsive
+
+https://ui.dev/amiresponsive?url=https://battleships-thomas-6fa1020603a4.herokuapp.com/
+
+* Some tests has been made through Code Institute's python code checker: https://pep8ci.herokuapp.com/
+
+## Bugs
 
 ## Deployment
 
