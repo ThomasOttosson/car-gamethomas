@@ -1,23 +1,15 @@
 # Battleships game
 
-![battleship](./assets/images/battleships.png)
+![battleship]()
 ## How to play
 
-* The purpose of the game is to discover all the "o" marked numbers in the board and sink the other opponents ships and the opponent is the computer in this game.
-
-* First steps in the game is to enter your ships length where you choose 6 different ships.
-
-* The board has number 0-99 where you can place out the ships and th sizes of the ships are: 5,4,3,3,2,2 in terms of length of the board.
-
-* The user guesses where the computer opponent has placed their ships by entering a number between 0-99.
-
-* The user cant guess the same number twice and everytime the user has guessed a number he or she will see that number on the board marked with an "x". If the user guessed the right number they will see the board marked with an "o".
-
-* The game informs the user if the user won or the computer and it will also tell them how attempts  it took them.
+* The user's goal is to shink the opponents ships by guessing a number between 0-99 on the enemy board. The game starts with user creating/placing their ships as a row or in a vertical line in different index sizes. After that process two boards get's created where the enemys board is on the top and the users board is at the bottom with ships included.
 
 ## Existing features
 
 ## Future features
+
+* Adding names for each board to improve clarity.
 
 ## Data model
 
@@ -30,6 +22,20 @@
 ## Validator testing
 
 ## Deployment
+
+* The deployment was made through github and Heroku. The step by step process where the following on github: Settings --> Pages --> Source --> Deploy from a branch --> Main --> /(root) --> Save.
+
+The depoyment though Heroku was made using the following steps: 
+
+1. first i typed pip3 freeze > requirements.txt. 
+
+2. I clicked on the button create app, choosed a unique name, picked Europe as a region and then pressed the button create app.
+
+3. I clicked on the settings tab, scrolled down, added buildpacks for python first and node.js as the secondary buildpack and clicked save changes for each buildpack.
+
+4. I clicked on the deploy tab, then pressed to connect with github, after that i searched for my repository and clicked on the connect button in order to link up the Heroku app with the repository code.
+
+5. As a last step i scrolled down to the bottom of the deploy tab and pressed deploy branch which is a manually deployment process through Heroku.
 
 ## Credits
 
