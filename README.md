@@ -1,17 +1,27 @@
 # Battleships game
 
-![battleship]()
+![battleship](./assets/images/background.png)
 ## How to play
 
-* The user's goal is to shink the opponents ships by guessing a number between 0-99 on the enemy board. The game starts with user creating/placing their ships as a row or in a vertical line in different index sizes. After that process two boards get's created where the enemys board is on the top and the users board is at the bottom with ships included.
+* The user's goal is to shink the opponents ships by guessing a number between 0-99 on the enemy board. 
+
+* The game starts with user creating/placing their ships as a row or in a vertical line in different index sizes.
+
+![battleship_zoomed_in](./assets/images/battleships_zoomed_in.png)
+
+* Once the user have created his board of ships, the user will be able to see a prewiew of his board.
+
+![battleship_preview]()
+
+* When the user has made his first guess two boards get's created where the enemys board is on the top and the users board is at the bottom with ships included.
+
+![battleship]()
 
 ## Existing features
 
 ## Future features
 
 * Adding names for each board to improve clarity.
-
-## Data model
 
 ## Testing
 
@@ -39,8 +49,21 @@ The depoyment though Heroku was made using the following steps:
 
 ## Credits
 
-* The majority of the code was taken or inspired directly or indirectly through https://drcodie.com/
+* The majority of the code was taken or inspired directly or indirectly through DrCodie's youtube channel: https://www.youtube.com/@DrCodie
+
+* Here is a link to Dr Codie's website: https://drcodie.com/
+
+* Some of the code was taken or inspired directly or indirectly through this video: https://www.youtube.com/watch?v=Ej7I8BPw7Gk&list=PLpeS0xTwoWAsn3SwQbSsOZ26pqZ-0CG6i
+
+* Some of the code was taken or inspired directly or indirectly through this video: https://www.youtube.com/watch?v=EziS2eGZGz4&list=PLpeS0xTwoWAsn3SwQbSsOZ26pqZ-0CG6i&index=2
+
+* Some of the code was taken or inspired directly or indirectly through this video: https://www.youtube.com/watch?v=r9yXpel08AA&list=PLpeS0xTwoWAsn3SwQbSsOZ26pqZ-0CG6i&index=3
+
+* Some of the code was taken or inspired directly or indirectly through this video: https://www.youtube.com/watch?v=RqyR-naxh60&list=PLpeS0xTwoWAsn3SwQbSsOZ26pqZ-0CG6i&index=4
+
+* Some of the code was taken or inspired directly or indirectly through this video: https://www.youtube.com/watch?v=aMLSS-JVYZk&list=PLpeS0xTwoWAsn3SwQbSsOZ26pqZ-0CG6i&index=5
+
+* Some of the code was taken or inspired directly or indirectly through this video: https://www.youtube.com/watch?v=GmWHhAGvaQA&list=PLpeS0xTwoWAsn3SwQbSsOZ26pqZ-0CG6i&index=6
 
 
-
-
+* Some of the code was taken or inspired directly or indirectly through Code Institute's Full Stack Developer course which is not accessed to the public except if you are a student. Here is a link to Code Institute's website: https://codeinstitute.net/
