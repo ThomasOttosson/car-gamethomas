@@ -72,6 +72,8 @@ https://ui.dev/amiresponsive?url=https://battleships-thomas-6fa1020603a4.herokua
 
 ## Bugs
 
+* Potential bug: Code Institute's python validator software shows plenty of white space errors which i can't figure out since the indentation and the software is working currently.
+
 ## Deployment
 
 * The deployment was made through github and Heroku. The step by step process where the following on github: Settings --> Pages --> Source --> Deploy from a branch --> Main --> /(root) --> Save.
