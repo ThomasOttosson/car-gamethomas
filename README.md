@@ -3,7 +3,7 @@
 ![battleship](./assets/images/background.png)
 ## How to play
 
-* The user's goal is to shink all the opponents ships by guessing a number between 0-99 on the enemy board. The ships are marked with a "o" symbol and if the user misses then the mark will be a "x" symbol. When the user has hit all the segments of a ship then the symbol "O" will be shown for that specific ship.
+* The user's goal is to sink all the opponents ships by guessing a number between 0-99 on the enemy board. The ships are marked with a "o" symbol and if the user misses then the mark will be a "x" symbol. When the user has hit all the segments of a ship then the symbol "O" will be shown for that specific ship.
 
 * The game starts with user creating/placing their ships as a row or in a vertical line in different index sizes.
 
@@ -16,6 +16,8 @@
 * When the user has made the first guess two boards get's created where the enemys board is on the top and the users board is at the bottom with ships included.
 
 ![battleship](./assets/images/battleships_board_created.png)
+
+* The first player who hits all the segments of the total ships will win.
 
 ## Features
 
