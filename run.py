@@ -275,28 +275,41 @@ show_board_c(taken2)
 # Main game loop runs for a set number of turns or until a player wins
 for i in range(80):
  
-#player shoots
+# Track all previous guesses made by player 1 (hits, misses, and completed ships)
     guesses1 = hit1 + miss1 + comp1
+    
+# Prompt player 1 to take a shot at player 2's board    
     shot1 = get_shot(guesses1)
+
+# Check if player 1's shot hits a ship on player 2's board and update hit/miss records
     ships1,hit1,miss1,comp1,missed1 = check_shot(shot1,ships1,hit1,miss1,comp1)
+
+# Display current state of player 2's board showing hits, misses, and destroyed ships
     show_board(hit1,miss1,comp1)
-#repeat until ships empty
+
+# Check if player 2 has no ships remaining; if true, player 1 wins
     if check_if_empty_2(ships1):
         print("End of game - Congratulations, you won!",i)
         break   
-#computer shoots
-   
+
+# Generate a shot for the computer player against player 1's board 
     shot2,guesses2 = get_shot_comp(guesses2,tactics2)
+
+# Check if the computer's shot hits a ship on player 1's board and update hit/miss records
     ships2,hit2,miss2,comp2,missed2 = check_shot(shot2,ships2,hit2,miss2,comp2)
+
+# Display the current state of player 1's board with updates for hits, misses, and destroyed ships
     show_board(hit2,miss2,comp2)
-     
+    
+# If the computer hits a ship segment, calculate new tactics for focused follow-up shots
     if missed2 == 1:
         tactics2 = calc_tactics(shot2,tactics2,guesses2,hit2)
     elif missed2 == 2:
         tactics2 = []
     elif len(tactics2) > 0:
         tactics2.pop(0)
- 
+
+# Check if player 1 has no ships remaining; if true, computer wins 
     if check_if_empty_2(ships2):
         print("end of game - computer wins",i)
         break
