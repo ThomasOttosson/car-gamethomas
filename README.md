@@ -3,7 +3,7 @@
 ![battleship](./assets/images/background.png)
 ## How to play
 
-* The user's goal is to shink the opponents ships by guessing a number between 0-99 on the enemy board. 
+* The user's goal is to shink all the opponents ships by guessing a number between 0-99 on the enemy board. 
 
 * The game starts with user creating/placing their ships as a row or in a vertical line in different index sizes.
 
@@ -11,11 +11,11 @@
 
 * Once the user have created his board of ships, the user will be able to see a prewiew of his board.
 
-![battleship_preview]()
+![battleship_preview](./assets/images/battleships_preview.png)
 
 * When the user has made his first guess two boards get's created where the enemys board is on the top and the users board is at the bottom with ships included.
 
-![battleship]()
+![battleship](./assets/images/battleships_board_created.png)
 
 ## Existing features
 
