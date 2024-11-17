@@ -17,7 +17,25 @@
 
 ![battleship](./assets/images/battleships_board_created.png)
 
-## Existing features
+## Features
+
+* In this version the battleships game the user can create their own board. This point is a little bit unique since a lot of battleships game has random generated board through their code.
+
+* The board consists of the index numbers 0-99 which makes the board have a decent size and a well timed playing adventure.
+
+* The game has clear guidelines and rules which improves the understanding of the game.
+
+* The game has two boards which enables the user to see their own board and the enemy board at the same time.
+
+* The code has a function called "def calc_tactics" which makes the game more interactive for the user since the function hits the indexes nearby a hit segment of the ships.
+
+* Once the game is over the game explains who won which is either the user or the computer.
+
+## Overall features
+
+* The game was created by using the programming language: Python.
+
+* The background color and the color of the numbers and letters was created with colorama in Python.
 
 ## Future features
 
@@ -27,7 +45,6 @@
 
 ## Bugs
 
-## Remaining bugs
 
 ## Validator testing
 
