@@ -62,9 +62,13 @@
 
 * The deployment was made through github and Heroku. The step by step process where the following on github: Settings --> Pages --> Source --> Deploy from a branch --> Main --> /(root) --> Save.
 
+![battleships_github](./assets/images/battleships_github.png)
+
 The depoyment though Heroku was made using the following steps: 
 
-1. first i typed pip3 freeze > requirements.txt. 
+1. first i typed pip3 freeze > requirements.txt.
+
+![battleships_pip](./assets/images/battleships_pip3.png)
 
 2. I clicked on the button create app, choosed a unique name, picked Europe as a region and then pressed the button create app.
 
