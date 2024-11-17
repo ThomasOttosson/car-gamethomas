@@ -46,7 +46,7 @@
 
 ## Overall features
 
-* The game was created by using the programming language: Python.
+* The game was created with the programming language: Python.
 
 * The background color and the color of the numbers and letters was created with colorama in Python.
 
