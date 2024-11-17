@@ -3,25 +3,29 @@
 ![battleship](./assets/images/background.png)
 ## How to play
 
-* The user's goal is to shink all the opponents ships by guessing a number between 0-99 on the enemy board. 
+* The user's goal is to shink all the opponents ships by guessing a number between 0-99 on the enemy board. The ships are marked with a "o" symbol and if the user misses then the mark will be a "x" symbol. When the user has hit all the segments of a ship then the symbol "O" will be shown for that specific ship.
 
 * The game starts with user creating/placing their ships as a row or in a vertical line in different index sizes.
 
 ![battleship_zoomed_in](./assets/images/battleships_zoomed_in.png)
 
-* Once the user have created his board of ships, the user will be able to see a prewiew of his board.
+* Once the user have created his board of ships, the user will be able to see a prewiew of the user's board.
 
 ![battleship_preview](./assets/images/battleships_preview.png)
 
-* When the user has made his first guess two boards get's created where the enemys board is on the top and the users board is at the bottom with ships included.
+* When the user has made the first guess two boards get's created where the enemys board is on the top and the users board is at the bottom with ships included.
 
 ![battleship](./assets/images/battleships_board_created.png)
 
 ## Features
 
-* In this version the battleships game the user can create their own board. This point is a little bit unique since a lot of battleships game has random generated board through their code.
+* In this version the battleships game the user can create their own board. This point is a little bit unique since a lot of battleships game has random generated boards through their code.
+
+![battleship_enter_ships](./assets/images/battleships_enter_ships.png)
 
 * The board consists of the index numbers 0-99 which makes the board have a decent size and a well timed playing adventure.
+
+![battleship_index](./assets/images/battleship_indexing.png)
 
 * The game has clear guidelines, rules and information which improves the understanding of the game.
 
@@ -29,9 +33,10 @@
 
 ![battleship_info](./assets/images/battleships_info.png)
 
-* The game has two boards which enables the user to see their own board and the enemy board at the same time.
 
 * The code has a function called "def calc_tactics" which makes the game more interactive for the user since the function hits the indexes nearby a hit segment of the ships.
+
+![battleships_tactics](./assets/images/battleships_tactics.png)
 
 * Once the game is over the game explains who won which is either the user or the computer.
 
@@ -50,7 +55,6 @@
 ## Testing
 
 ## Bugs
-
 
 ## Validator testing
 
