@@ -70,20 +70,16 @@
 
 * The testing of the game has been made through the deployed version in Heroku here: https://battleships-thomas-6fa1020603a4.herokuapp.com/
 
-| Action                              | Expectation                                       | Pass/Fail  |
-|-------------------------------------|---------------------------------------------------|------------|
-| Enter coordinates with number 0-99  | User is being asked to place the next number and, | Pass       |
-|                                     | cordinate is placed.                              |            |
-| Enter coordinate with letter        | Error message: Please enter a valid number.       | Pass       |
-| Enter repeated coordinate           | Error message: error - please try again.          | Pass       |
-| Enter coordinate 0-99 while the     | Expect to see and x mark if it's a miss or o if   | Pass       |
-| game is running/board created.      | it's a hit.                                       |            |
-| Enter a letter while the  game is   | Error message: Please enter a valid number.       | Pass       |
-| running/board created.              |                                                   |            |
-| Enter repeated coordinate while the | Error message: incorrect number, used before.     | Pass       |
-| game is running.                    |                                                   |            |
-| Last shot is done from either       | Stops the game and announces the winner.          | Pass       |
-| computer or user.                   |                                                   |            |
+| Action                                      | Expectation                                              | Pass/Fail |
+|---------------------------------------------|----------------------------------------------------------|-----------|
+| Enter coordinates with number 0-99         | User is being asked to place the next number, and the coordinate is placed. | Pass |
+| Enter coordinate with letter               | Error message: Please enter a valid number.             | Pass |
+| Enter repeated coordinate                  | Error message: error - please try again.                | Pass |
+| Enter coordinate 0-99 while the game is running/board created. | Expect to see an X mark if it's a miss or O if it's a hit. | Pass |
+| Enter a letter while the game is running/board created. | Error message: Please enter a valid number.             | Pass |
+| Enter repeated coordinate while the game is running. | Error message: incorrect number, used before.           | Pass |
+| Last shot is done from either computer or user. | Stops the game and announces the winner.               | Pass |
+
 
 * Some tests has been made through Code Institute's python code checker: https://pep8ci.herokuapp.com/
 
