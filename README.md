@@ -74,10 +74,10 @@
 | Enter coordinate with letter in regards to creating the board.               | Error message: Please enter a valid number.             | Pass |
 | Enter repeated coordinate in regards to creating the board.                  | Error message: error - please try again.                | Pass |
 | Enter coordinate 0-99 while the game is running/board created in regards to making a shot. | Expect to see a "x" mark if it's a miss or "o" if it's a hit. | Pass |
-| Enter a coordinate/number to sink a ship.         | A big "O" symbol pops up within the board.                           | Pass |
-| Enter a letter while the game is running/board created. | Error message: Please enter a valid number.             | Pass |
-| Enter repeated coordinate while the game is running. | Error message: incorrect number, used before.           | Pass |
-| Last shot is done from either computer or user. | Stops the game and announces the winner.               | Pass |
+| Enter a coordinate/number to sink a ship in regards to making a shot.         | A big "O" symbol pops up within the board.                           | Pass |
+| Enter a letter while the game is running/board created in regards to making a shot. | Error message: Please enter a valid number.             | Pass |
+| Enter repeated coordinate while the game is running in regards to making a shot. | Error message: incorrect number, used before.           | Pass |
+| Last shot is done from either computer or user in regards to making a shot. | Stops the game and announces the winner.               | Pass |
 
 
 
