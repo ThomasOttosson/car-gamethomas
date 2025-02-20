@@ -77,7 +77,7 @@
 | Enter a coordinate/number to sink a ship in regards to making a shot.         | A big "O" symbol pops up within the board.                           | Pass |
 | Enter a letter while the game is running/board created in regards to making a shot. | Error message: Please enter a valid number.             | Pass |
 | Enter repeated coordinate while the game is running in regards to making a shot. | Error message: incorrect number, used before.           | Pass |
-| Last shot is done from either computer or user in regards to making a shot. | Stops the game and announces the winner.               | Pass |
+| Last shot is done from either computer or user. | Stops the game and announces the winner.               | Pass |
 
 
 
