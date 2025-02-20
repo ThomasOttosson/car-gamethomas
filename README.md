@@ -7,15 +7,15 @@
 
 * The game starts with user creating/placing their ships as a row or in a vertical line in different index sizes.
 
-![battleship_zoomed_in](./assets/images/battleships_zoomed_in.png)
+![battleship_zoomed_in](./assets/images/python_welcome.png)
 
 * Once the user have created his board of ships, the user will be able to see a prewiew of the user's board.
 
-![battleship_preview](./assets/images/battleships_preview.png)
+![battleship_preview](./assets/images/python_board.png)
 
 * When the user has made the first guess two boards get's created where the enemys board is on the top and the users board is at the bottom with ships included.
 
-![battleship](./assets/images/battleships_board_created.png)
+![battleship](./assets/images/boards_battleship.png)
 
 * The first player who hits all the segments of the total ships will win.
 
@@ -33,7 +33,7 @@
 
 ![battleship_guidelines](./assets/images/battleships_guideline_and_rules.png)
 
-![battleship_info](./assets/images/battleships_info.png)
+![battleship_info](./assets/images/info_battle.png)
 
 
 * The code has a function called "def calc_tactics" which makes the game more interactive for the user since the function hits the indexes nearby a hit segment of the ships.
