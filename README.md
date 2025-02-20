@@ -75,10 +75,12 @@
 | Enter coordinates with number 0-99         | User is being asked to place the next number, and the coordinate is placed. | Pass |
 | Enter coordinate with letter               | Error message: Please enter a valid number.             | Pass |
 | Enter repeated coordinate                  | Error message: error - please try again.                | Pass |
-| Enter coordinate 0-99 while the game is running/board created. | Expect to see an X mark if it's a miss or O if it's a hit. | Pass |
+| Enter coordinate 0-99 while the game is running/board created. | Expect to see a "x" mark if it's a miss or "o" if it's a hit. | Pass |
+| Enter a number to sink a ship.         | A big "O" symbol pops up.                           | Pass |
 | Enter a letter while the game is running/board created. | Error message: Please enter a valid number.             | Pass |
 | Enter repeated coordinate while the game is running. | Error message: incorrect number, used before.           | Pass |
 | Last shot is done from either computer or user. | Stops the game and announces the winner.               | Pass |
+
 
 
 * Some tests has been made through Code Institute's python code checker: https://pep8ci.herokuapp.com/
