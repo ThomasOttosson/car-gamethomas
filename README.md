@@ -5,7 +5,7 @@
 
 * The user's goal is to sink all the opponents ships by guessing a number between 0-99 on the enemy board. The ships are marked with a "o" symbol and if the user misses then the mark will be a "x" symbol. When the user has hit all the segments of a ship then the symbol "O" will be shown for that specific ship.
 
-* The game starts with user creating/placing their ships as a row or in a vertical line in different index sizes.
+* The game starts with the user creating/placing their ships as a row or in a vertical line in different index sizes.
 
 ![battleship_zoomed_in](./assets/images/python_welcome.png)
 
@@ -15,13 +15,13 @@
 
 * When the user has made the first guess two boards get's created where the enemys board is on the top and the users board is at the bottom with ships included.
 
-![battleship](./assets/images/boards_battleship.png)
-
 * The first player who hits all the segments of the total ships will win.
+
+![battleship](./assets/images/boards_battleship.png)
 
 ## Features
 
-* In this version the battleships game the user can create their own board. This point is a little bit unique since a lot of battleships game has random generated boards through their code.
+* In this version of the battleships game the user can create their own board. This point is a little bit unique since a lot of battleships game has random generated boards through their code.
 
 ![battleship_enter_ships](./assets/images/battleships_enter_ships.png)
 
@@ -52,11 +52,9 @@
 
 * The color design is inspired from the movie "The Matrix".
 
-* Error handling, when the user enters a repeated number/coordinate or anything that isn't a number/coordinate then software displays different error messages related to the issue.
+* Error handling, when the user enters a repeated number/coordinate or anything that isn't a number/coordinate then the software displays different error messages related to the issue.
 
 ## Future features
-
-* Adding names for each board to improve clarity.
 
 * Design the game color theme to look a bit more appealing/interactive for kids.
 
@@ -72,11 +70,11 @@
 
 | Action                                      | Expectation                                              | Pass/Fail |
 |---------------------------------------------|----------------------------------------------------------|-----------|
-| Enter coordinates with number 0-99         | User is being asked to place the next number, and the coordinate is placed. | Pass |
-| Enter coordinate with letter               | Error message: Please enter a valid number.             | Pass |
-| Enter repeated coordinate                  | Error message: error - please try again.                | Pass |
-| Enter coordinate 0-99 while the game is running/board created. | Expect to see a "x" mark if it's a miss or "o" if it's a hit. | Pass |
-| Enter a number to sink a ship.         | A big "O" symbol pops up within the board.                           | Pass |
+| Enter coordinates with number 0-99 in regards to creating the board.        | User is being asked to place the next number, and the coordinate is placed. | Pass |
+| Enter coordinate with letter in regards to creating the board.               | Error message: Please enter a valid number.             | Pass |
+| Enter repeated coordinate in regards to creating the board.                  | Error message: error - please try again.                | Pass |
+| Enter coordinate 0-99 while the game is running/board created in regards to making a shot. | Expect to see a "x" mark if it's a miss or "o" if it's a hit. | Pass |
+| Enter a coordinate/number to sink a ship.         | A big "O" symbol pops up within the board.                           | Pass |
 | Enter a letter while the game is running/board created. | Error message: Please enter a valid number.             | Pass |
 | Enter repeated coordinate while the game is running. | Error message: incorrect number, used before.           | Pass |
 | Last shot is done from either computer or user. | Stops the game and announces the winner.               | Pass |
