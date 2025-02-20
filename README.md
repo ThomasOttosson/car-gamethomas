@@ -44,15 +44,27 @@
 
 ![battleships_winner](./assets/images/battleships_winner.png)
 
-## Overall features
+## Extra/Overall features
 
 * The game was created with the programming language: Python.
 
 * The background color and the color of the numbers and letters was created with colorama in Python.
 
+* The color design is inspired from the movie "The Matrix".
+
+* Error handling, when the user enters a repeated number/coordinate or anything that isn't a number/coordinate then software displays different error messages related to the issue.
+
 ## Future features
 
 * Adding names for each board to improve clarity.
+
+* Design the game color theme to look a bit more appealing/interactive for kids.
+
+* Adding info based on if the shot was a hit or miss in text.
+
+* Mark out where the ships are placed at the user's board.
+
+* Adding a text that can differentiate between a hit and a sinked ship.
 
 ## Testing
 
@@ -72,17 +84,14 @@
 | game is running.                    |                                                   |            |
 | Last shot is done from either       | Stops the game and announces the winner.          | Pass       |
 | computer or user.                   |                                                   |            |
-* Some tests has been made through the website Amiresponsive: 
-
-https://ui.dev/amiresponsive
-
-https://ui.dev/amiresponsive?url=https://battleships-thomas-6fa1020603a4.herokuapp.com/
 
 * Some tests has been made through Code Institute's python code checker: https://pep8ci.herokuapp.com/
 
+![python_linter](./assets/images/ci_python_linter.png)
+
 ## Bugs
 
-* Potential bug: Code Institute's python validator software shows plenty of white space errors which i can't figure out since the indentation and the software is working currently.
+No bugs detected.
 
 ## Deployment
 
